@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+
+    -->
+    <h1>Contador de Cliques</h1>
+    <button id="incrementar">INCREMENTAR</button>
+    <button id="zerar">ZERAR CONTADOR</button>
+    <p id="contador">O contador está com 0 cliques.</p>
+
+    <script>
+      let contador = 0;
+      const contadorEl = document.getElementById("contador");
+
+      document.getElementById("incrementar").addEventListener("click", () => {
+        contador++;
+        contadorEl.textContent = `O contador está com ${contador} cliques.`;
+      });
+
+      document.getElementById("zerar").addEventListener("click", () => {
+        contador = 0;
+        contadorEl.style.display = "none";
+      });
+
+      contadorEl.addEventListener("click", () => {
+        contador++;
+        contadorEl.textContent = `O contador está com ${contador} cliques.`;
+      });
+    </script>
+  </body>
+</html>
